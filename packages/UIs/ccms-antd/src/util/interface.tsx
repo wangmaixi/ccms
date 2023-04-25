@@ -1,5 +1,5 @@
-import { InterfaceHelper as _InterfaceHelper } from 'ccms'
-import { IRenderFailModal, IRenderSuccessModal } from 'ccms/dist/src/util/interface'
+import { InterfaceHelper as _InterfaceHelper } from '@test/ccms'
+import { IRenderFailModal, IRenderSuccessModal } from '@test/ccms/dist/src/util/interface'
 import { Modal } from 'antd'
 
 export default class InterfaceHelper extends _InterfaceHelper {

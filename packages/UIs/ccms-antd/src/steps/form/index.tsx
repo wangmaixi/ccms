@@ -1,12 +1,12 @@
 import React from 'react'
-import { FormStep } from 'ccms'
+import { FormStep } from '@test/ccms'
 import {
   IForm,
   IFormItem,
   IFormStepModal,
   FormConfig,
   IButtonProps
-} from 'ccms/dist/src/steps/form'
+} from '@test/ccms/dist/src/steps/form'
 import { Button, Form, Space, Modal, Collapse, Row } from 'antd'
 
 import { FormProps } from 'antd/lib/form'
@@ -120,7 +120,7 @@ export default class FormStepComponent extends FormStep {
             help={message === '' ? null : <div style={{ color: 'red' }}>{message}</div>}
             style={itemStyle}
             className={styles[`ccms-antd-mini-form-${fieldType}`]}
-            // className={ [styles[`ccms-antd-mini-form-${fieldType}`], layout === 'horizontal' && subLabel ? styles['ccms-antd-label-vertical-flex-start']: null].join(' ') } // 预留layout配置项启用时所需label css代码
+          // className={ [styles[`ccms-antd-mini-form-${fieldType}`], layout === 'horizontal' && subLabel ? styles['ccms-antd-label-vertical-flex-start']: null].join(' ') } // 预留layout配置项启用时所需label css代码
           >
             {subLabel || null}
             {children}

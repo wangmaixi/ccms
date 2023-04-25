@@ -1,4 +1,4 @@
-import { FieldConfigs } from "ccms/dist/src/components/formFields";
+import { FieldConfigs } from "@test/ccms/dist/src/components/formFields";
 
 const config: FieldConfigs[] = [
   {
@@ -50,14 +50,14 @@ const config: FieldConfigs[] = [
     "canCollapse": true,
     "fields": [
       {
-      "field": "from",
-      "label": "接口字段",
-      "type": "text"
+        "field": "from",
+        "label": "接口字段",
+        "type": "text"
       },
       {
-      "field": "to",
-      "label": "目标字段",
-      "type": "text"
+        "field": "to",
+        "label": "目标字段",
+        "type": "text"
       }
     ]
   },

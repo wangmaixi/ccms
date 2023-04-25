@@ -1,8 +1,8 @@
 import React from 'react'
-import { TabsDisplay } from 'ccms'
+import { TabsDisplay } from '@test/ccms'
 import { Form, Tabs } from 'antd'
-import { ITabsField, ITabsFieldItem, ITabsFieldItemField } from 'ccms/dist/src/components/formFields/tabs/display'
-import { Display } from 'ccms/dist/src/components/formFields/common'
+import { ITabsField, ITabsFieldItem, ITabsFieldItemField } from '@test/ccms/dist/src/components/formFields/tabs/display'
+import { Display } from '@test/ccms/dist/src/components/formFields/common'
 import { display as getALLComponents } from '..'
 
 export default class TabsDisplayComponent extends TabsDisplay<Record<string, never>> {
@@ -15,7 +15,7 @@ export default class TabsDisplayComponent extends TabsDisplay<Record<string, nev
     return (
       <Form.Item
         label={label}
-        // {...formItemLayout(layout, fieldType, label)}
+      // {...formItemLayout(layout, fieldType, label)}
       >
         {children}
       </Form.Item>

@@ -1,4 +1,3 @@
-import { CustomColumn } from 'ccms'
+import { CustomColumn } from '@test/ccms'
 
-export default class CustomColumnComponent extends CustomColumn {
-}
+export default class CustomColumnComponent extends CustomColumn { }

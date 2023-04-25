@@ -3,8 +3,8 @@ import { Button, Row, Col, Space, Typography, Collapse } from 'antd'
 const { Title } = Typography;
 const { Panel } = Collapse;
 import { FormProps } from 'antd/lib/form'
-import { DetailStep } from 'ccms'
-import { IDetail, IDetailItem, DetailConfig } from 'ccms/dist/src/steps/detail'
+import { DetailStep } from '@test/ccms'
+import { IDetail, IDetailItem, DetailConfig } from '@test/ccms/dist/src/steps/detail'
 
 import getALLComponents from '../../components/detail'
 import style from "./index.less"

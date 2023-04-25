@@ -1,9 +1,9 @@
 import React from 'react'
 import { Tooltip, Space } from 'antd'
-import { CodeField } from 'ccms'
+import { CodeField } from '@test/ccms'
 import { FullscreenOutlined, FullscreenExitOutlined } from '@ant-design/icons'
 import Editor, { loader } from '@monaco-editor/react'
-import { ICodeFieldContainer, ICodeField } from 'ccms/dist/src/components/detail/code'
+import { ICodeFieldContainer, ICodeField } from '@test/ccms/dist/src/components/detail/code'
 import styles from './index.less'
 
 loader.config({ paths: { vs: 'https://storage.360buyimg.com/swm-plus/monaco-editor-0.28.1/min/vs' } })

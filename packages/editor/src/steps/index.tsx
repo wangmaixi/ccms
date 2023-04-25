@@ -1,4 +1,4 @@
-import { StepConfigs as IStepConfigs } from 'ccms/dist/src/steps'
+import { StepConfigs as IStepConfigs } from '@test/ccms/dist/src/steps'
 import { Config as FetchStepConfig, Template as FetchStepTemplate } from './fetch'
 import { Config as FormStepConfig, Template as FormStepTemplate } from './form'
 import { Config as TableStepConfig, Template as TableStepTemplate } from './table'

@@ -1,4 +1,3 @@
-import { CustomDetail } from 'ccms';
+import { CustomDetail } from '@test/ccms'
 
-export default class CustomFieldComponent extends CustomDetail {
-}
+export default class CustomFieldComponent extends CustomDetail { }

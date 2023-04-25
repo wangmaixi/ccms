@@ -1,11 +1,11 @@
 import React from 'react'
-import { DetailImageField } from 'ccms'
-import { IImageDetail, IImageItemDetail, ImageDetailConfig } from 'ccms/dist/src/components/detail/image'
+import { DetailImageField } from '@test/ccms'
+import { IImageDetail, IImageItemDetail, ImageDetailConfig } from '@test/ccms/dist/src/components/detail/image'
 import { EyeOutlined } from '@ant-design/icons'
 import { Space, Tooltip } from 'antd'
 import styles from './index.less'
 
-export const PropsType = (props: ImageDetailConfig) => {}
+export const PropsType = (props: ImageDetailConfig) => { }
 
 export default class ImageDetailComponent extends DetailImageField {
   renderComponent = (props: IImageDetail) => {

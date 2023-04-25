@@ -1,20 +1,13 @@
 import React from 'react'
-import { ImageUrlField } from 'ccms'
-import { IImageUrlField, ImageUrlFieldConfig } from 'ccms/dist/src/components/formFields/imageurl'
+import { ImageUrlField } from '@test/ccms'
+import { IImageUrlField, ImageUrlFieldConfig } from '@test/ccms/dist/src/components/formFields/imageurl'
 import TextCompnent from './commontext'
 
 export const PropsType = (props: ImageUrlFieldConfig) => { }
 
 export default class ImageUrlFieldComponent extends ImageUrlField {
   renderComponent = (props: IImageUrlField) => {
-    const {
-      readonly,
-      disabled,
-      placeholder,
-      value,
-      onChange,
-      width, height
-    } = props
+    const { readonly, disabled, placeholder, value, onChange, width, height } = props
     return (
       <div>
         <TextCompnent

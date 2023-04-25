@@ -1,4 +1,3 @@
-import { HiddenDisplay } from 'ccms'
+import { HiddenDisplay } from '@test/ccms'
 
-export default class HiddenDisplayComponent extends HiddenDisplay {
-}
+export default class HiddenDisplayComponent extends HiddenDisplay { }

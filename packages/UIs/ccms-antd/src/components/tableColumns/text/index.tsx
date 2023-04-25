@@ -1,6 +1,6 @@
 import React from 'react'
-import { TextColumn } from 'ccms'
-import { ITextColumn, TextColumnConfig } from 'ccms/dist/src/components/tableColumns/text'
+import { TextColumn } from '@test/ccms'
+import { ITextColumn, TextColumnConfig } from '@test/ccms/dist/src/components/tableColumns/text'
 import { Modal, Button } from 'antd'
 import styles from './index.less'
 

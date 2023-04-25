@@ -1,13 +1,13 @@
 import React from 'react'
-import { GroupDisplay } from 'ccms'
-import { IGroupField, GroupFieldConfig } from 'ccms/dist/src/components/formFields/group'
-import { IFormItem } from 'ccms/dist/src/steps/form'
+import { GroupDisplay } from '@test/ccms'
+import { IGroupField, GroupFieldConfig } from '@test/ccms/dist/src/components/formFields/group'
+import { IFormItem } from '@test/ccms/dist/src/steps/form'
 import { Form } from 'antd'
 import { display as getALLComponents } from '..'
 import styles from './index.less'
 import { formItemLayout, computedItemStyle, computedGapStyle } from '../common'
 
-export const PropsType = (props: GroupFieldConfig) => {}
+export const PropsType = (props: GroupFieldConfig) => { }
 
 export default class GroupDisplayComponent extends GroupDisplay {
   getALLComponents = (type: any) => getALLComponents[type]

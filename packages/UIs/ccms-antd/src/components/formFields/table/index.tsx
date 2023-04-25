@@ -1,6 +1,6 @@
 import React from 'react'
-import { TableField } from 'ccms'
-import { ITableField, ITableColumn } from 'ccms/dist/src/components/formFields/table'
+import { TableField } from '@test/ccms'
+import { ITableField, ITableColumn } from '@test/ccms/dist/src/components/formFields/table'
 import { Modal, Table, Tooltip } from 'antd'
 import { ColumnType } from 'antd/lib/table'
 import { SortableContainer, SortableContainerProps, SortableElement, SortableHandle } from 'react-sortable-hoc'
@@ -104,21 +104,21 @@ export default class TableFieldComponent extends TableField<TableFieldComponentS
           title={
             tableOperations && (tableOperations.topLeft || tableOperations.topRight)
               ? () => (
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <div>{tableOperations.topLeft}</div>
-                    <div>{tableOperations.topRight}</div>
-                  </div>
-                )
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <div>{tableOperations.topLeft}</div>
+                  <div>{tableOperations.topRight}</div>
+                </div>
+              )
               : undefined
           }
           footer={
             tableOperations && (tableOperations.bottomLeft || tableOperations.bottomRight)
               ? () => (
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <div>{tableOperations.bottomLeft}</div>
-                    <div>{tableOperations.bottomRight}</div>
-                  </div>
-                )
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <div>{tableOperations.bottomLeft}</div>
+                  <div>{tableOperations.bottomRight}</div>
+                </div>
+              )
               : undefined
           }
           rowKey={primary}
@@ -126,15 +126,15 @@ export default class TableFieldComponent extends TableField<TableFieldComponentS
             ...prefixColumns,
             ...tableColumns.map(
               (column: ITableColumn, columnIndex: number) =>
-                ({
-                  key: columnIndex,
-                  dataIndex: column.field,
-                  title: column.label,
-                  className: typeof tableSort === 'function' ? styles['drag-visible'] : undefined,
-                  align: column.align,
-                  render: (value: unknown, record: { [field: string]: unknown }, index: number) =>
-                    column.render(value, record, index)
-                } as ColumnType<object>)
+              ({
+                key: columnIndex,
+                dataIndex: column.field,
+                title: column.label,
+                className: typeof tableSort === 'function' ? styles['drag-visible'] : undefined,
+                align: column.align,
+                render: (value: unknown, record: { [field: string]: unknown }, index: number) =>
+                  column.render(value, record, index)
+              } as ColumnType<object>)
             )
           ]}
           dataSource={data as { [field: string]: unknown }[]}
@@ -144,11 +144,11 @@ export default class TableFieldComponent extends TableField<TableFieldComponentS
           components={
             tableSort && !expanded
               ? {
-                  body: {
-                    wrapper: DraggableContainer,
-                    row: DraggableBodyRow
-                  }
+                body: {
+                  wrapper: DraggableContainer,
+                  row: DraggableBodyRow
                 }
+              }
               : undefined
           }
           expandable={{

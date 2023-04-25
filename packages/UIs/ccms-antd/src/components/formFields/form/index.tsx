@@ -1,8 +1,8 @@
 import React from 'react'
-import { FormField } from 'ccms'
+import { FormField } from '@test/ccms'
 import { Form, Button, Collapse, Space } from 'antd'
 import { PlusOutlined, ArrowUpOutlined, ArrowDownOutlined, DeleteOutlined } from '@ant-design/icons'
-import { IFormField, IFormFieldItem, IFormFieldItemField } from 'ccms/dist/src/components/formFields/form'
+import { IFormField, IFormFieldItem, IFormFieldItemField } from '@test/ccms/dist/src/components/formFields/form'
 import getALLComponents from '..'
 import { FiledErrMsg, formItemLayout } from '../common'
 

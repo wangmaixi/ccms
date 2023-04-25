@@ -1,6 +1,6 @@
 import React from 'react'
-import { TableStep } from 'ccms'
-import { ITable, ITableColumn, ITableStepOperationConfirm, ITableStepOperationModal, ITableStepRowOperation, ITableStepRowOperationButton, ITableStepRowOperationGroup, ITableStepRowOperationGroupItem, ITableStepTableOperation, ITableStepTableOperationButton, ITableStepTableOperationGroup, ITableStepTableOperationGroupItem, DescriptionConfig } from 'ccms/dist/src/steps/table'
+import { TableStep } from '@test/ccms'
+import { ITable, ITableColumn, ITableStepOperationConfirm, ITableStepOperationModal, ITableStepRowOperation, ITableStepRowOperationButton, ITableStepRowOperationGroup, ITableStepRowOperationGroupItem, ITableStepTableOperation, ITableStepTableOperationButton, ITableStepTableOperationGroup, ITableStepTableOperationGroupItem, DescriptionConfig } from '@test/ccms/dist/src/steps/table'
 import { Table, Button, Dropdown, Menu, Modal, Space, Tooltip } from 'antd'
 import { DownOutlined, InfoCircleOutlined } from '@ant-design/icons'
 import getALLComponents from '../../components/tableColumns'
@@ -288,16 +288,16 @@ export default class TableStepComponent extends TableStep {
       modalWidthValue
     } = props
 
-    let modelWitdh : string | undefined
-    if(modalWidthMode === 'none') {
+    let modelWitdh: string | undefined
+    if (modalWidthMode === 'none') {
       modelWitdh = undefined
-    } else if(modalWidthMode === 'percentage') {
+    } else if (modalWidthMode === 'percentage') {
       modelWitdh = modalWidthValue + '%'
-    } else if(modalWidthMode === 'pixel') {
+    } else if (modalWidthMode === 'pixel') {
       modelWitdh = modalWidthValue + 'px'
     }
 
-    
+
     return (
       <Modal
         width={modelWitdh}

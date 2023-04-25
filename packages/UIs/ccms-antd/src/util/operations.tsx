@@ -1,6 +1,6 @@
 import { DownOutlined } from '@ant-design/icons'
 import { Button, Dropdown, Menu, Modal, Space, Typography } from 'antd'
-import { OperationsHelper } from 'ccms'
+import { OperationsHelper } from '@test/ccms'
 import {
   IOperations,
   IOperationGroup,
@@ -8,7 +8,7 @@ import {
   IOperationNode,
   IOperationLeaf,
   IOperationConfirm
-} from 'ccms/dist/src/util/operations'
+} from '@test/ccms/dist/src/util/operations'
 import React from 'react'
 import InterfaceHelper from './interface'
 

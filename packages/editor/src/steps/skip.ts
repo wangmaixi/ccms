@@ -1,13 +1,13 @@
-import { FormConfig } from "ccms/dist/src/steps/form";
-import { SkipConfig } from "ccms/dist/src/steps/skip";
+import { FormConfig } from '@test/ccms/dist/src/steps/form'
+import { SkipConfig } from '@test/ccms/dist/src/steps/skip'
 
 export const Config: FormConfig = {
-  "type": "form",
-  "actions": [],
-  "rightTopActions": []
+  type: 'form',
+  actions: [],
+  rightTopActions: []
 }
 
 export const Template: SkipConfig = {
-  "type": 'skip',
-  "fields": []
+  type: 'skip',
+  fields: []
 }

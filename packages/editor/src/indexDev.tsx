@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { CCMSConfig } from 'ccms/dist/src/main'
+import { CCMSConfig } from '@test/ccms/dist/src/main'
 import App from './app'
 import DefaultConfig from './DefaultConfig'
 import appInfo from '../package.json'

@@ -1,4 +1,4 @@
-import { CCMSConfig } from 'ccms/dist/src/main'
+import { CCMSConfig } from '@test/ccms/dist/src/main'
 
 const DefaultConfig: CCMSConfig = {
   steps: [

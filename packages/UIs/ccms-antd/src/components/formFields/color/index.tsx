@@ -1,7 +1,7 @@
 import React from "react";
-import { ColorField } from 'ccms';
+import { ColorField } from '@test/ccms';
 import ColorComponent from './sketchpicker'
-import { IColorField, ColorFieldConfig } from "ccms/dist/src/components/formFields/color";
+import { IColorField, ColorFieldConfig } from "@test/ccms/dist/src/components/formFields/color";
 
 export const PropsType = (props: ColorFieldConfig) => { };
 

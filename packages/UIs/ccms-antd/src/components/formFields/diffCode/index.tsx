@@ -1,9 +1,9 @@
 import React from 'react'
 import { Tooltip, Space } from 'antd'
-import { DiffCodeField } from 'ccms'
+import { DiffCodeField } from '@test/ccms'
 import { FullscreenOutlined, FullscreenExitOutlined, UndoOutlined } from '@ant-design/icons'
 import { loader, DiffEditor } from '@monaco-editor/react'
-import { IDiffCodeFieldContainer, IDiffCodeField } from 'ccms/dist/src/components/formFields/diffCode'
+import { IDiffCodeFieldContainer, IDiffCodeField } from '@test/ccms/dist/src/components/formFields/diffCode'
 import styles from './index.less'
 
 loader.config({ paths: { vs: 'https://storage.360buyimg.com/swm-plus/monaco-editor-0.28.1/min/vs' } })
@@ -15,11 +15,11 @@ declare global {
 }
 
 export default class DiffCodeFieldComponent extends DiffCodeField {
-  state= {
+  state = {
     fullScreenStatus: false
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.diffCodeEditorDefine = window.define
     window.define = undefined
   }
@@ -41,19 +41,19 @@ export default class DiffCodeFieldComponent extends DiffCodeField {
 
     return (
       <div className={styles['editor-page']}>
-        <div id ='editor-wrapper' className={ fullScreenStatus ? styles['editor-fullscreen'] : ''} tabIndex={-1} onKeyDown={(e) => { keydownCallback(e) }}>
+        <div id='editor-wrapper' className={fullScreenStatus ? styles['editor-fullscreen'] : ''} tabIndex={-1} onKeyDown={(e) => { keydownCallback(e) }}>
           <div className={`${styles['header-wrapper']} ${styles[`header-wrapper-${theme}`]}`}>
             <Space>
-              { fullScreenStatus && fullScreen
+              {fullScreenStatus && fullScreen
                 ? <Tooltip title={'退出全屏'} placement="bottom" getPopupContainer={(ele) => ele.parentElement || document.body}>
-                    <FullscreenExitOutlined style={{ fontSize: '20px' }} onClick={() => { exitFull() }}/>
-                  </Tooltip>
+                  <FullscreenExitOutlined style={{ fontSize: '20px' }} onClick={() => { exitFull() }} />
+                </Tooltip>
                 : null
               }
-              { !fullScreenStatus && fullScreen
+              {!fullScreenStatus && fullScreen
                 ? <Tooltip title={'全屏'} placement="bottom" getPopupContainer={(ele) => ele.parentElement || document.body}>
-                    <FullscreenOutlined style={{ fontSize: '20px' }} onClick={() => { enterFull() }}/>
-                  </Tooltip>
+                  <FullscreenOutlined style={{ fontSize: '20px' }} onClick={() => { enterFull() }} />
+                </Tooltip>
                 : null
               }
             </Space>
@@ -78,19 +78,19 @@ export default class DiffCodeFieldComponent extends DiffCodeField {
 
     return (
       <DiffEditor
-      loading={
-        <div className={styles["sp-cube-wrapper"]} title="">
-          <div className={styles["sp-cube"]}>
-           <div className={styles["sp-sides"]}><div className={styles["sp-top"]}></div><div className={styles["sp-right"]}></div><div className={styles["sp-bottom"]}></div><div className={styles["sp-left"]}></div><div className={styles["sp-front"]}></div><div className={styles["sp-back"]}></div></div>
-          </div>
-        </div>}
-        height= { fullScreenStatus ? document.body.clientHeight : Number(height) }
+        loading={
+          <div className={styles["sp-cube-wrapper"]} title="">
+            <div className={styles["sp-cube"]}>
+              <div className={styles["sp-sides"]}><div className={styles["sp-top"]}></div><div className={styles["sp-right"]}></div><div className={styles["sp-bottom"]}></div><div className={styles["sp-left"]}></div><div className={styles["sp-front"]}></div><div className={styles["sp-back"]}></div></div>
+            </div>
+          </div>}
+        height={fullScreenStatus ? document.body.clientHeight : Number(height)}
         theme={editorTheme}
         language={codeType}
         original={originalCode}
         modified={modifiedCode}
-        options={{readOnly: true}}
-        beforeMount = {this.handleEditorbeforeMount}
+        options={{ readOnly: true }}
+        beforeMount={this.handleEditorbeforeMount}
       />
     )
   }

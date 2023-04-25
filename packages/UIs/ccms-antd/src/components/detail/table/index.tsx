@@ -1,5 +1,5 @@
 import React from 'react'
-import { DetailTableField } from 'ccms'
+import { DetailTableField } from '@test/ccms'
 import {
   ITableField,
   TableFieldConfig,
@@ -14,7 +14,7 @@ import {
   ITableDetailTableOperationButton,
   ITableDetailTableOperationGroup,
   ITableDetailTableOperationGroupItem
-} from 'ccms/dist/src/components/detail/table'
+} from '@test/ccms/dist/src/components/detail/table'
 import { Table, Dropdown, Menu, Modal, Space } from 'antd'
 import getALLComponents from '../../tableColumns'
 import CCMS from '../../../main'
@@ -65,16 +65,16 @@ export default class TableFieldComponent extends DetailTableField {
             pagination === undefined
               ? false
               : {
-                  current: pagination.current,
-                  pageSize: pagination.pageSize,
-                  total: pagination.total,
-                  onChange: (page, pageSize) => pagination.onChange(page, pageSize || pagination.pageSize),
-                  showSizeChanger: true,
-                  showTotal: (total, range) => `第 ${range[0]} - ${range[1]} 条 / 共 ${total} 条`,
-                  locale: {
-                    items_per_page: '条/页'
-                  }
+                current: pagination.current,
+                pageSize: pagination.pageSize,
+                total: pagination.total,
+                onChange: (page, pageSize) => pagination.onChange(page, pageSize || pagination.pageSize),
+                showSizeChanger: true,
+                showTotal: (total, range) => `第 ${range[0]} - ${range[1]} 条 / 共 ${total} 条`,
+                locale: {
+                  items_per_page: '条/页'
                 }
+              }
           }
         />
       </div>

@@ -1,6 +1,6 @@
 import React from 'react'
-import { ImageColumn } from 'ccms'
-import { IImageColumn, ImageColumnConfig } from 'ccms/dist/src/components/tableColumns/image'
+import { ImageColumn } from '@test/ccms'
+import { IImageColumn, ImageColumnConfig } from '@test/ccms/dist/src/components/tableColumns/image'
 export const PropsType = (props: ImageColumnConfig) => { }
 
 export default class ImageColumnComponent extends ImageColumn {

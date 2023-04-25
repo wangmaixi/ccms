@@ -1,6 +1,6 @@
 import React from 'react'
-import { SkipStep } from 'ccms'
-import { SkipConfig } from 'ccms/dist/src/steps/skip'
+import { SkipStep } from '@test/ccms'
+import { SkipConfig } from '@test/ccms/dist/src/steps/skip'
 import FieldComponents from '../../components/formFields'
 
 export default class SkipStepComponent extends SkipStep {
@@ -14,4 +14,4 @@ export default class SkipStepComponent extends SkipStep {
     return <></>
   }
 }
-export const PropsType = (props: SkipConfig ) => { };
+export const PropsType = (props: SkipConfig) => { };

@@ -7,20 +7,13 @@
  * @FilePath: /ccms-antd-mini/Users/zhenjintao1/work/code/ccms-antd/src/components/formFields/select/single/display.tsx
  */
 import React from 'react'
-import { SelectSingleDisplay } from 'ccms'
-import { ISelectSingleField } from 'ccms/dist/src/components/formFields/select/single/display'
-import { ISelectFieldOption } from 'ccms/dist/src/components/formFields/select/common'
+import { SelectSingleDisplay } from '@test/ccms'
+import { ISelectSingleField } from '@test/ccms/dist/src/components/formFields/select/single/display'
+import { ISelectFieldOption } from '@test/ccms/dist/src/components/formFields/select/common'
 
 export default class SelectSingleDisplayComponent extends SelectSingleDisplay {
   renderSelectSingleComponent = (props: ISelectSingleField) => {
-    const {
-      value,
-      options
-    } = props
-    return <React.Fragment>
-      {
-        options.find((item: ISelectFieldOption) => item.value === value)?.label
-      }
-    </React.Fragment>
+    const { value, options } = props
+    return <>{options.find((item: ISelectFieldOption) => item.value === value)?.label}</>
   }
 }

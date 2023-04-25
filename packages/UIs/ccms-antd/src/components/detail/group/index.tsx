@@ -1,13 +1,13 @@
 import React from 'react'
-import { DetailGroupField } from 'ccms'
-import { IGroupField, GroupFieldConfig } from 'ccms/dist/src/components/detail/group'
-import { IDetailItem } from 'ccms/dist/src/steps/detail'
+import { DetailGroupField } from '@test/ccms'
+import { IGroupField, GroupFieldConfig } from '@test/ccms/dist/src/components/detail/group'
+import { IDetailItem } from '@test/ccms/dist/src/steps/detail'
 import { Col, Row } from 'antd'
 import getALLComponents from '..'
 import styles from './index.less'
 import { computedItemStyle, computedGapStyle } from '../common'
 
-export const PropsType = (props: GroupFieldConfig) => {}
+export const PropsType = (props: GroupFieldConfig) => { }
 
 export default class GroupFieldComponent extends DetailGroupField {
   getALLComponents = (type: any) => getALLComponents[type]

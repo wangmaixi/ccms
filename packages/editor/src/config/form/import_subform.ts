@@ -1,4 +1,4 @@
-import { FieldConfigs } from "ccms/dist/src/components/formFields";
+import { FieldConfigs } from "@test/ccms/dist/src/components/formFields";
 
 const config: FieldConfigs[] = [
   {
@@ -7,58 +7,58 @@ const config: FieldConfigs[] = [
     "type": "group",
     "fields": [
       {
-          "field": "type",
-          "label": "配置来源",
-          "type": "select_single",
-          "mode": "dropdown",
-          "canClear": true,
-          "options": {
-              "from": "manual",
-              "data": [
-                  {
-                      "value": "data",
-                      "label": "数据"
-                  },
-                  {
-                      "value": "interface",
-                      "label": "接口"
-                  }
-              ]
-          }
+        "field": "type",
+        "label": "配置来源",
+        "type": "select_single",
+        "mode": "dropdown",
+        "canClear": true,
+        "options": {
+          "from": "manual",
+          "data": [
+            {
+              "value": "data",
+              "label": "数据"
+            },
+            {
+              "value": "interface",
+              "label": "接口"
+            }
+          ]
+        }
       },
       {
-          "field": "dataField",
-          "label": "数据字段",
-          "type": "text",
-          "condition": {
-              "template": "${type} === 'data'",
-              "params": [
-                  {
-                      "field": "type",
-                      "data": {
-                          "source": "record",
-                          "field": "type"
-                      }
-                  }
-              ]
-          }
+        "field": "dataField",
+        "label": "数据字段",
+        "type": "text",
+        "condition": {
+          "template": "${type} === 'data'",
+          "params": [
+            {
+              "field": "type",
+              "data": {
+                "source": "record",
+                "field": "type"
+              }
+            }
+          ]
+        }
       },
       {
-          "field": "configField",
-          "label": "配置字段",
-          "type": "text",
-          "condition": {
-              "template": "${type} === 'data'",
-              "params": [
-                  {
-                      "field": "type",
-                      "data": {
-                          "source": "record",
-                          "field": "type"
-                      }
-                  }
-              ]
-          }
+        "field": "configField",
+        "label": "配置字段",
+        "type": "text",
+        "condition": {
+          "template": "${type} === 'data'",
+          "params": [
+            {
+              "field": "type",
+              "data": {
+                "source": "record",
+                "field": "type"
+              }
+            }
+          ]
+        }
       },
       {
         "field": "interface",
@@ -90,15 +90,15 @@ const config: FieldConfigs[] = [
         "condition": {
           "template": "${type} === 'interface'",
           "params": [
-              {
-                  "field": "type",
-                  "data": {
-                      "source": "record",
-                      "field": "type"
-                  }
+            {
+              "field": "type",
+              "data": {
+                "source": "record",
+                "field": "type"
               }
+            }
           ]
-      }
+        }
       }
     ]
   },

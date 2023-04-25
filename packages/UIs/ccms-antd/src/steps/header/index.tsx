@@ -1,7 +1,7 @@
 import React from 'react'
 import { Breadcrumb, BreadcrumbItemProps, Statistic, PageHeader, PageHeaderProps } from 'antd'
-import { HeaderStep } from 'ccms'
-import { IBreadcurmbItemProps, IBreadcurmbProps, IHeaderProps, IStatisticProps } from 'ccms/dist/src/steps/header'
+import { HeaderStep } from '@test/ccms'
+import { IBreadcurmbItemProps, IBreadcurmbProps, IHeaderProps, IStatisticProps } from '@test/ccms/dist/src/steps/header'
 import styles from './index.less'
 import InterfaceHelper from '../../util/interface'
 import OperationHelper from '../../util/operation'
@@ -34,7 +34,7 @@ export default class HeaderStepComponent extends HeaderStep {
    * @param props
    * @returns
    */
-   renderBreadcurmbComponent = (props: IBreadcurmbProps) => {
+  renderBreadcurmbComponent = (props: IBreadcurmbProps) => {
     return (
       <Breadcrumb separator={props.separator}>
         {props.items}
@@ -88,7 +88,7 @@ export default class HeaderStepComponent extends HeaderStep {
     if (props.onBack) {
       pageHeaderProps.onBack = props.onBack
     }
-    
+
     return (
       <PageHeader {...pageHeaderProps}>{this.renderContent(props.mainContent, props.extraContent)}</PageHeader>
     )

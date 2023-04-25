@@ -1,7 +1,7 @@
 import React from "react";
 import { Select } from "antd"
-import { AnyField } from 'ccms';
-import { IAnyField, AnyFieldConfig, IAnyTypeField } from "ccms/dist/src/components/formFields/any";
+import { AnyField } from '@test/ccms';
+import { IAnyField, AnyFieldConfig, IAnyTypeField } from "@test/ccms/dist/src/components/formFields/any";
 import TextField from '../text'
 import NumberField from '../number'
 import BooleanField from '../switch'
@@ -18,7 +18,7 @@ export default class AnyFieldComponent extends AnyField {
       <Select
         value={props.type}
         onChange={(type) => props.onChange(type)}
-        getPopupContainer={(ele) =>  ele.parentElement || document.body}
+        getPopupContainer={(ele) => ele.parentElement || document.body}
       >
         <Select.Option value="null">空</Select.Option>
         <Select.Option value="string">字符串</Select.Option>

@@ -1,6 +1,6 @@
 import React from 'react'
-import { DetailLink } from 'ccms'
-import { ILinkDetail } from 'ccms/dist/src/components/detail/link'
+import { DetailLink } from '@test/ccms'
+import { ILinkDetail } from '@test/ccms/dist/src/components/detail/link'
 
 export default class LinkDetailComponent extends DetailLink {
   renderComponent = (props: ILinkDetail) => {

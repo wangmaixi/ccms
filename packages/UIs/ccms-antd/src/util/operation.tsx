@@ -1,5 +1,5 @@
 import React from 'react'
-import { OperationHelper as _OperationHelper } from 'ccms'
+import { OperationHelper as _OperationHelper } from '@test/ccms'
 import { Modal } from 'antd'
 import CCMS from '../main'
 

@@ -1,6 +1,6 @@
 import React, { Key } from 'react'
-import { SelectSingleField } from 'ccms'
-import { ISelectSingleField } from 'ccms/dist/src/components/formFields/select/single'
+import { SelectSingleField } from '@test/ccms'
+import { ISelectSingleField } from '@test/ccms/dist/src/components/formFields/select/single'
 import { Radio, Select } from 'antd'
 import InterfaceHelper from '../../../../util/interface'
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import { TabsField } from 'ccms'
+import { TabsField } from '@test/ccms'
 import { Form, Tabs } from 'antd'
-import { ITabsField, ITabsFieldItem, ITabsFieldItemField } from 'ccms/dist/src/components/formFields/tabs'
-import { Field } from 'ccms/dist/src/components/formFields/common'
+import { ITabsField, ITabsFieldItem, ITabsFieldItemField } from '@test/ccms/dist/src/components/formFields/tabs'
+import { Field } from '@test/ccms/dist/src/components/formFields/common'
 import getALLComponents from '..'
 import { FiledErrMsg, formItemLayout } from '../common'
 import commonStyles from '../common.less'
@@ -22,7 +22,7 @@ export default class TabsFieldComponent extends TabsField<{}> {
         validateStatus={status === 'normal' ? undefined : status === 'error' ? 'error' : 'validating'}
         help={FiledErrMsg({ message, fieldType })}
         {...formItemLayout(layout, fieldType, label)}
-        // className={ layout === 'horizontal' && subLabel ? commonStyles['ccms-antd-label-vertical-flex-start']: null }
+      // className={ layout === 'horizontal' && subLabel ? commonStyles['ccms-antd-label-vertical-flex-start']: null }
       >
         {subLabel || null}
         {children}

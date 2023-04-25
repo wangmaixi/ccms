@@ -1,9 +1,9 @@
 {
-  "name": "ccms",
-  "version": "1.5.0",
+  "name": "@test/ccms",
+  "version": "1.5.1",
   "description": "ConfigableCMS",
   "main": "lib/index.js",
-  "module": "dist/index.js",
+  "module": "dist/index.esm.js",
   "types": "dist/src/index.d.ts",
   "files": [
     "lib",
