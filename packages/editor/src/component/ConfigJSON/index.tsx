@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Drawer, Button, Modal, Space } from 'antd'
 import MonacoEditor from 'react-monaco-editor'
-import 'monaco-editor/esm/vs/language/json/monaco.contribution'
-import 'monaco-editor/esm/vs/editor/contrib/find/browser/findController'
-import 'monaco-editor/esm/vs/editor/contrib/folding/browser/folding'
 
 interface ConfigJSONProps {
   configStringify: boolean

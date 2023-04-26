@@ -1,9 +1,9 @@
 import React from 'react'
 import { Drawer, Button, Modal, message, Card, Space, Radio, Dropdown, Menu } from 'antd'
 import { DownOutlined, DeleteOutlined, ArrowUpOutlined, ArrowDownOutlined, PlusCircleOutlined } from '@ant-design/icons'
-import { CCMS as CCMSAntDesign } from 'ccms-antd'
+import { CCMS as CCMSAntDesign } from '@test/ccms-antd'
 import { CCMSConfig, BasicConfig, PageListItem } from '@test/ccms/dist/src/main'
-import { FormConfig } from '@test/ccms/dist/src/steps/form'
+import { FormConfig } from 'ccms/dist/src/steps/form'
 import { cloneDeep } from 'lodash'
 import copy from 'copy-html-to-clipboard'
 import { PageTemplate, PageTemplates, StepConfigs, StepTemplates, stepName } from './steps'
@@ -361,65 +361,52 @@ class App extends React.Component<AppProps, CCMSConsigState> {
     return (
       <div id="ccms-config" className="ccms-config">
         {/* 预览CCMS */}
-        <div className="preview">
-          {ready && (
-            <CCMS
-              checkPageAuth={checkPageAuth}
-              loadPageURL={loadPageURL}
-              loadPageFrameURL={loadPageFrameURL}
-              // @ts-ignore
-              loadPageConfig={loadPageConfig}
-              loadPageList={loadPageList}
-              loadCustomSource={loadCustomSource}
-              loadDomain={loadDomain}
-              handlePageRedirect={handlePageRedirect}
-              sourceData={sourceData}
-              baseRoute={baseRoute}
-              callback={() => {
-                // if (window.history.length > 1) {
-                //   window.history.back()
-                // } else {
-                //   window.close()
-                // }
-              }}
-              // @ts-ignore
-              config={pageConfig}
-            />
-          )}
-        </div>
 
         {/* 配置化步骤内容 */}
-        <Drawer width={365} mask={false} placement="right" closable={false} visible getContainer={false}>
+        {/* <Drawer width={365} mask={false} placement="right" closable={false} visible getContainer={false}> */}
+        <div className="config-info">
           <Card
             title="页面配置"
             extra={
               <Space>
                 <Button.Group>
-                  <Button type="primary" onClick={() => this.handleSave()}>
-                    保存
+                  <Button
+                    onClick={() => {
+                      copy(JSON.stringify(pageConfig))
+                      message.info('复制成功')
+                    }}
+                  >
+                    复制配置
                   </Button>
-                  <Button onClick={() => onCancel && onCancel()}>取消</Button>
-                  <Dropdown
-                    overlay={
-                      <Menu>
-                        <Menu.Item onClick={() => this.handleRefreshPreview()}>强制刷新</Menu.Item>
-                        <Menu.Item
+                  <Button onClick={() => this.setState({ configStringify: true })}>配置文件</Button>
+
+                  {/* <Button type="primary" onClick={() => this.handleSave()}>
+                    保存
+                  </Button> */}
+                  {/* <Button onClick={() => onCancel && onCancel()}>取消</Button> */}
+                  {false && (
+                    <Dropdown
+                      overlay={
+                        <Menu>
+                          <Menu.Item onClick={() => this.handleRefreshPreview()}>强制刷新</Menu.Item>
+                          {/* <Menu.Item
                           onClick={() => {
                             copy(JSON.stringify(pageConfig))
                             message.info('复制成功')
                           }}
                         >
                           复制配置
-                        </Menu.Item>
-                        <Menu.Item onClick={() => this.setState({ configStringify: true })}>配置文件</Menu.Item>
-                      </Menu>
-                    }
-                    getPopupContainer={(ele) =>
-                      document.getElementById('ccms-config') || ele.parentElement || document.body
-                    }
-                  >
-                    <Button icon={<DownOutlined />} />
-                  </Dropdown>
+                        </Menu.Item> */}
+                          <Menu.Item onClick={() => this.setState({ configStringify: true })}>配置文件</Menu.Item>
+                        </Menu>
+                      }
+                      getPopupContainer={(ele) =>
+                        document.getElementById('ccms-config') || ele.parentElement || document.body
+                      }
+                    >
+                      <Button icon={<DownOutlined />} />
+                    </Dropdown>
+                  )}
                 </Button.Group>
               </Space>
             }
@@ -944,7 +931,8 @@ class App extends React.Component<AppProps, CCMSConsigState> {
               </>
             )}
           </Card>
-        </Drawer>
+        </div>
+        {/* </Drawer> */}
 
         {/* 编辑配置文件 */}
         <ConfigJSON

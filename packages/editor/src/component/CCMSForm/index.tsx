@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormStep } from 'ccms-antd-mini'
+import { FormStep } from '@test/ccms-antd-mini'
 import { FormConfig } from '@test/ccms/dist/src/steps/form'
 import { PageListItem } from '@test/ccms/dist/src/main'
 
