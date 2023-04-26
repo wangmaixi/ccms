@@ -1,6 +1,6 @@
 import React from 'react'
-import { TableStep } from 'ccms'
-import { ITable, ITableColumn, ITableStepOperationConfirm, ITableStepOperationModal, ITableStepRowOperation, ITableStepRowOperationButton, ITableStepRowOperationGroup, ITableStepRowOperationGroupItem, ITableStepTableOperation, ITableStepTableOperationButton, ITableStepTableOperationGroup, ITableStepTableOperationGroupItem } from 'ccms/dist/src/steps/table'
+import { TableStep } from '@test/ccms'
+import { ITable, ITableColumn, ITableStepOperationConfirm, ITableStepOperationModal, ITableStepRowOperation, ITableStepRowOperationButton, ITableStepRowOperationGroup, ITableStepRowOperationGroupItem, ITableStepTableOperation, ITableStepTableOperationButton, ITableStepTableOperationGroup, ITableStepTableOperationGroupItem } from '@test/ccms/dist/src/steps/table'
 import { Table, Button, Dropdown, Menu, Modal, Space } from 'antd'
 import { DownOutlined } from '@ant-design/icons'
 import getALLComponents from '../../components/tableColumns'
@@ -55,7 +55,7 @@ export default class TableStepComponent extends TableStep {
           dataSource={data}
           scroll={{ x: 1000 }}
           size="middle"
-          pagination={ pagination === undefined ? false : {
+          pagination={pagination === undefined ? false : {
             current: pagination.current,
             pageSize: pagination.pageSize,
             total: pagination.total,

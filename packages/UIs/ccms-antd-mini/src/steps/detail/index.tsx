@@ -1,6 +1,6 @@
 import React from 'react'
-import { DetailStep } from 'ccms'
-import { IDetail, IDetailItem } from 'ccms/dist/src/steps/detail'
+import { DetailStep } from '@test/ccms'
+import { IDetail, IDetailItem } from '@test/ccms/dist/src/steps/detail'
 import { Button, Form, Space } from 'antd'
 import getALLComponents from '../../components/detail'
 import { FormItemProps } from 'antd/lib/form'
@@ -19,10 +19,10 @@ export default class DetailStepComponent extends DetailStep {
     const formItemLayout: any | null =
       layout === 'horizontal'
         ? {
-            labelAlign: 'left',
-            labelCol: { span: 6 },
-            wrapperCol: { span: 18 }
-          }
+          labelAlign: 'left',
+          labelCol: { span: 6 },
+          wrapperCol: { span: 18 }
+        }
         : null
     return (
       <Form
@@ -60,7 +60,7 @@ export default class DetailStepComponent extends DetailStep {
 
     return (
       <Form.Item
-        key = {key}
+        key={key}
         label={label}
         {...formItemLayout}
         className={styles[`ccms-antd-mini-form-${fieldType}`]}

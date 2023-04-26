@@ -1,7 +1,7 @@
 import React from "react";
-import { RadioField } from 'ccms';
+import { RadioField } from '@test/ccms';
 import { Radio } from "antd";
-import { IRadioField } from "ccms/dist/src/components/formFields/radio";
+import { IRadioField } from "@test/ccms/dist/src/components/formFields/radio";
 
 export default class RadioFieldComponent extends RadioField {
     renderComponent = (props: IRadioField) => {

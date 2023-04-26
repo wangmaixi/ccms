@@ -1,6 +1,6 @@
 import React from 'react'
-import { FormStep } from 'ccms'
-import { IForm, IFormItem, IFormStepModal, IButtonProps } from 'ccms/dist/src/steps/form'
+import { FormStep } from '@test/ccms'
+import { IForm, IFormItem, IFormStepModal, IButtonProps } from '@test/ccms/dist/src/steps/form'
 import { Button, Form, Space, Modal } from 'antd'
 import { FormProps, FormItemProps } from 'antd/lib/form'
 import getALLComponents from '../../components/formFields'
@@ -29,10 +29,10 @@ export default class FormStepComponent extends FormStep {
     const formItemLayout: FormProps =
       layout === 'horizontal'
         ? {
-            labelAlign: 'left',
-            labelCol: { span: 6 },
-            wrapperCol: { span: 18 }
-          }
+          labelAlign: 'left',
+          labelCol: { span: 6 },
+          wrapperCol: { span: 18 }
+        }
         : {}
 
     return (

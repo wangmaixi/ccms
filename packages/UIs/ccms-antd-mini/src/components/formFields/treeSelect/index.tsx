@@ -1,6 +1,6 @@
 import React from "react";
-import { TreeSelectField } from 'ccms';
-import { ITreeSelectField, TreeSelectFieldConfig } from "ccms/dist/src/components/formFields/treeSelect";
+import { TreeSelectField } from '@test/ccms';
+import { ITreeSelectField, TreeSelectFieldConfig } from "@test/ccms/dist/src/components/formFields/treeSelect";
 import { TreeSelect } from 'antd';
 import InterfaceHelper from "../../../util/interface";
 

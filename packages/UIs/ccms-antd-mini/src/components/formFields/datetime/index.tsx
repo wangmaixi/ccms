@@ -1,28 +1,24 @@
 import * as React from 'react'
-import { DatetimeField } from 'ccms'
-import { DatePicker, TimePicker,ConfigProvider } from 'antd'
-import { IDatetimeField, DatetimeFieldConfig } from 'ccms/dist/src/components/formFields/datetime'
+import { DatetimeField } from '@test/ccms'
+import { DatePicker, TimePicker, ConfigProvider } from 'antd'
+import { IDatetimeField, DatetimeFieldConfig } from '@test/ccms/dist/src/components/formFields/datetime'
 import pickerLocale from 'antd/lib/date-picker/locale/zh_CN'
 
 export default class DatetimeFieldComponent extends DatetimeField {
   renderComponent = (props: IDatetimeField) => {
-    const {
-      value,
-      mode,
-      placeholder
-    } = props
+    const { value, mode, placeholder } = props
 
     if (mode === 'time') {
       return (
-          <TimePicker
-            style={{ width: '100%' }}
-            value={value}
-            format={props.format}
-            locale={pickerLocale}
-            placeholder={placeholder}
-            onChange={async (time) => await props.onChange(time)}
-            getPopupContainer={(ele) => ele.parentElement || document.body}
-          />
+        <TimePicker
+          style={{ width: '100%' }}
+          value={value}
+          format={props.format}
+          locale={pickerLocale}
+          placeholder={placeholder}
+          onChange={async (time) => await props.onChange(time)}
+          getPopupContainer={(ele) => ele.parentElement || document.body}
+        />
       )
     } else if (mode === 'date') {
       return (
@@ -44,7 +40,7 @@ export default class DatetimeFieldComponent extends DatetimeField {
           format={props.format}
           locale={pickerLocale}
           placeholder={placeholder}
-          showTime={true}
+          showTime
           onChange={async (time) => await props.onChange(time)}
           getPopupContainer={(ele) => ele.parentElement || document.body}
         />
@@ -59,8 +55,14 @@ export default class DatetimeFieldComponent extends DatetimeField {
           locale={pickerLocale}
           placeholder={placeholder}
           onChange={async (time) => await props.onChange(time)}
-          getPopupContainer={(ele) => document.getElementById('ccms-antd-mini') || document.getElementById('ccms-antd-mini-form') || ele.parentElement || document.body}
-        />)
+          getPopupContainer={(ele) =>
+            document.getElementById('ccms-antd-mini') ||
+            document.getElementById('ccms-antd-mini-form') ||
+            ele.parentElement ||
+            document.body
+          }
+        />
+      )
     }
   }
 }

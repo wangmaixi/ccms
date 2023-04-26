@@ -42,7 +42,7 @@ export default {
     }),
     terser()
   ],
-  external: ['react', 'react-dom', 'ccms', '@ant-design/icons', 'react-color', 'antd', 'moment'],
+  external: ['react', 'react-dom', '@test/ccms', '@ant-design/icons', 'react-color', 'antd', 'moment'],
   watch: {
     include: 'src/**'
   }

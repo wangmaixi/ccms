@@ -1,14 +1,11 @@
 import React from 'react'
-import { TextField } from 'ccms'
+import { TextField } from '@test/ccms'
 import { Input } from 'antd'
-import { ITextField } from 'ccms/dist/src/components/formFields/text'
+import { ITextField } from '@test/ccms/dist/src/components/formFields/text'
 
 export default class TextFieldComponent extends TextField {
   renderComponent = (props: ITextField) => {
-    const {
-      value,
-      onChange
-    } = props
+    const { value, onChange } = props
 
     return (
       <Input

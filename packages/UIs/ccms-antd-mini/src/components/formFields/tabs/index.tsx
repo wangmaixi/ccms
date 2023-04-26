@@ -1,9 +1,9 @@
 import React from 'react'
-import { TabsField } from 'ccms'
+import { TabsField } from '@test/ccms'
 import { Form, Tabs } from 'antd'
-import { ITabsField, ITabsFieldItem, ITabsFieldItemField } from 'ccms/dist/src/components/formFields/tabs'
+import { ITabsField, ITabsFieldItem, ITabsFieldItemField } from '@test/ccms/dist/src/components/formFields/tabs'
 import getALLComponents from '../'
-import { Field } from 'ccms/dist/src/components/formFields/common'
+import { Field } from '@test/ccms/dist/src/components/formFields/common'
 import { formItemLayout } from '../common'
 
 export default class TabsFieldComponent extends TabsField<{}> {
@@ -27,8 +27,8 @@ export default class TabsFieldComponent extends TabsField<{}> {
         extra={extra ? extra.trim() : ''}
         required={required}
         label={label}
-        validateStatus={ status === 'normal' ? undefined : status === 'error' ? 'error' : 'validating' }
-        help={ message === '' ? null : message}
+        validateStatus={status === 'normal' ? undefined : status === 'error' ? 'error' : 'validating'}
+        help={message === '' ? null : message}
         {...formItemLayout(layout, fieldType, label)}
       >
         {children}
